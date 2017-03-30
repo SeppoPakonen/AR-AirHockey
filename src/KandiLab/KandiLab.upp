@@ -1,0 +1,73 @@
+description "Kandidaatin työn pääohjelma.\3770,0,128";
+
+noblitz;
+
+uses
+	CtrlLib,
+	SDL,
+	plugin/box2d,
+	Painter;
+
+library(POSIX) "opencv_core opencv_highgui opencv_features2d opencv_flann opencv_calib3d opencv_imgproc ";
+
+library(WIN32 !OPENCV_DEBUG) "opencv_core2413 opencv_highgui2413 opencv_features2d2413 opencv_flann2413 opencv_calib3d2413 opencv_imgproc2413";
+
+library(WIN32 OPENCV_DEBUG) "opencv_core2413d opencv_highgui2413d opencv_features2d2413d opencv_flann2413d opencv_calib3d2413d opencv_imgproc2413d";
+
+library(POSIX NONFREE) opencv_nonfree;
+
+file
+	main.cpp,
+	Game.h,
+	Game.cpp,
+	Common.h,
+	KandiLab.h,
+	KandiLab.cpp,
+	KandiLab.iml,
+	KandiLab.lay,
+	Analyzer.h,
+	Analyzer.cpp,
+	Process.cpp,
+	"Game Classes" readonly separator,
+	AirHockey.h,
+	AirHockey.cpp,
+	Contact.h,
+	Contact.cpp,
+	Object.h,
+	Object.cpp,
+	World.h,
+	World.cpp,
+	WorldDebug.cpp,
+	WorldDraw.cpp,
+	"Video Classes" readonly separator,
+	MediaStream.h,
+	VideoMixer.h,
+	VideoMixer.cpp,
+	VideoStream.h,
+	VideoStream.cpp,
+	VideoCapture.h,
+	VideoCapture.cpp,
+	"Module Classes" readonly separator,
+	Engine.h,
+	Engine.cpp,
+	Jack.h,
+	Module.h,
+	Module.cpp,
+	"Graphic Rendering" readonly separator,
+	GameStream.h,
+	GameStream.cpp,
+	SurfaceRender.h,
+	SurfaceRender.cpp,
+	"Computer Vision" readonly separator,
+	VisionCtrl.h,
+	VideoDraw.h,
+	VideoDraw.cpp,
+	FeatureDetector.h,
+	FeatureDetector.cpp,
+	ObjectDetection.h,
+	ObjectDetection.cpp;
+
+mainconfig
+	"Normal" = "GUI MT NOGTK USEMALLOC",
+	"Include SIFT & SURF algorithms" = "GUI MT NOGTK USEMALLOC NONFREE";
+
