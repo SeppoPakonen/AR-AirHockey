@@ -1,0 +1,8 @@
+#ifndef _KandiLab_icpp_init_stub
+#define _KandiLab_icpp_init_stub
+#include "CtrlLib/init"
+#include "SDL/init"
+#include "plugin/box2d/init"
+#include "Painter/init"
+#include "plugin/z/init"
+#endif

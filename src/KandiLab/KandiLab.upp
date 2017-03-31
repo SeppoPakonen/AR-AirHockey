@@ -6,7 +6,8 @@ uses
 	CtrlLib,
 	SDL,
 	plugin/box2d,
-	Painter;
+	Painter,
+	plugin/z;
 
 library(POSIX) "opencv_core opencv_highgui opencv_features2d opencv_flann opencv_calib3d opencv_imgproc ";
 
@@ -15,6 +16,8 @@ library(WIN32 !OPENCV_DEBUG) "opencv_core2413 opencv_highgui2413 opencv_features
 library(WIN32 OPENCV_DEBUG) "opencv_core2413d opencv_highgui2413d opencv_features2d2413d opencv_flann2413d opencv_calib3d2413d opencv_imgproc2413d";
 
 library(POSIX NONFREE) opencv_nonfree;
+
+library(WIN32 NONFREE) opencv_nonfree2413;
 
 file
 	main.cpp,
@@ -25,6 +28,7 @@ file
 	KandiLab.cpp,
 	KandiLab.iml,
 	KandiLab.lay,
+	KandiLab.rc,
 	Analyzer.h,
 	Analyzer.cpp,
 	Process.cpp,
