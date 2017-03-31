@@ -48,7 +48,12 @@ void VideoCapture::Process(int ms) {
 	
 	if (!export_path.IsEmpty()) {
 		String file = export_path + DIR_SEPS + Format("%05d.png", frame_counter);
-		imwrite(file.Begin(), buffer);
+		try {
+			imwrite(file.Begin(), buffer);
+		}
+		catch (...) {
+			
+		}
 	}
 	
 	frame_counter++;

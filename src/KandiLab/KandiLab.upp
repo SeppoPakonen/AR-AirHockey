@@ -11,9 +11,9 @@ uses
 
 library(POSIX) "opencv_core opencv_highgui opencv_features2d opencv_flann opencv_calib3d opencv_imgproc ";
 
-library(WIN32 !OPENCV_DEBUG) "opencv_core2413 opencv_highgui2413 opencv_features2d2413 opencv_flann2413 opencv_calib3d2413 opencv_imgproc2413";
+library(WIN32) "opencv_core2413 opencv_highgui2413 opencv_features2d2413 opencv_flann2413 opencv_calib3d2413 opencv_imgproc2413";
 
-library(WIN32 OPENCV_DEBUG) "opencv_core2413d opencv_highgui2413d opencv_features2d2413d opencv_flann2413d opencv_calib3d2413d opencv_imgproc2413d";
+library(WIN32 OPENCV_DEBUG FORCE_DEBUG) "opencv_core2413d opencv_highgui2413d opencv_features2d2413d opencv_flann2413d opencv_calib3d2413d opencv_imgproc2413d";
 
 library(POSIX NONFREE) opencv_nonfree;
 
