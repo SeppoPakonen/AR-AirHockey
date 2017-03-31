@@ -4,6 +4,8 @@ This is the augmented reality application, which was the basis of my candidate t
 
 The release version is available for download for those who are interested. The game-only part works well, but the analyzer part is a little bit buggy to use, however.
 
+### [Download latest release](https://github.com/sppp/AR-AirHockey/releases/latest)
+
 ![KandiLab screenshot](https://github.com/sppp/AR-AirHockey/raw/master/docs/screenshot.JPG)
 
 ### Afterthoughts
