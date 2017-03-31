@@ -12,4 +12,5 @@ The release version is available for download for those who are interested. The 
 - SDL is not needed at all, and that dependency could be removed easily
 - If the analyser part was not needed, I would translate JSFeat to C++ and use it instead of OpenCV
 - The class structure is too complicated for this purpose, but I was making a separate game library which didn't have to be compact.
+- Drawing should be done in OpenGL so scaling image up could be done efficiently
 
