@@ -1,6 +1,6 @@
 # AR-AirHockey
 
-This is the augmented reality application, which was the basis of my candidate thesis. It uses only OpenCV, SDL and Ultimate++.
+This is the augmented reality application, which was the basis of my team's candidate thesis. It uses only OpenCV, SDL and Ultimate++.
 
 The release version is available for download for those who are interested. The game-only part works well, but the analyzer part is a little bit buggy to use, however.
 
