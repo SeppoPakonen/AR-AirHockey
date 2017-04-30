@@ -18,13 +18,15 @@ World::World() : world(b2Vec2(0.0, -10.0), true), world_draw(this) {
 	ts.Reset();
 }
 
-void World::Paint(Draw& w) {
+void World::Paint(Draw& draw) {
 	float hz = 60;
 	int velocityIterations = 8;
 	int positionIterations = 10;
 
 	float32 timeStep = ts.Elapsed() / 1000.0;
 	ts.Reset();
+	
+	ImageDraw w(GetSize());
 	
 	int flags = b2DebugDraw::e_shapeBit | b2DebugDraw::e_jointBit;
 	if(dbg_showBoxes)
@@ -58,6 +60,8 @@ void World::Paint(Draw& w) {
 		w.DrawLine(p1, p2, 2, LtGreen);
 		w.DrawEllipse(p2.x - 3, p2.y - 3, 6, 6, Green, PEN_SOLID, Black);
 	}
+	
+	draw.DrawImage(0,0,w);
 }
 
 void World::LeftDown(Point p0, dword keyflags) {

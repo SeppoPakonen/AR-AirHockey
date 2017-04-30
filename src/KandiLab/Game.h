@@ -6,7 +6,7 @@
 NAMESPACE_UPP
 
 class StartupDialog : public TopWindow {
-	Button play, analyse;
+	Button play, analyse, showai;
 	ImageCtrl banner;
 	
 public:
@@ -28,6 +28,16 @@ public:
 	Game();
 	
 	void OpenAirHockey();
+	
+};
+
+class AIOnlyGame : public TopWindow {
+	GameCtrl::GameTable table;
+	
+public:
+	typedef AIOnlyGame CLASSNAME;
+	AIOnlyGame();
+	
 	
 };
 

@@ -296,6 +296,7 @@ GameTable::GameTable() : pl_a(0), pl_b(1) {
 	score[0] = 0;
 	score[1] = 0;
 	area_a.table = this;
+	human_player = true;
 }
 
 void GameTable::Reset() {
@@ -489,7 +490,8 @@ void GameTable::ResetPuck() {
 void GameTable::ProcessAI() {
 	
 	// Process AI player moves
-	//pl_a.Process();
+	if (!human_player)
+		pl_a.Process();
 	pl_b.Process();
 	
 }

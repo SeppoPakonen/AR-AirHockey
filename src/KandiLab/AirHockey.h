@@ -63,6 +63,7 @@ class GameTable : public World, public ContactListener {
 	int score[2];
 	int score_limit;
 	bool player_a_starts;
+	bool human_player;
 	
 public:
 	typedef GameTable CLASSNAME;
@@ -75,6 +76,7 @@ public:
 	void ProcessAI();
 	void SetPlayer(Pointf p);
 	void SetScoreLimit(int i) {score_limit = i;}
+	void SetHumanPlayer(bool b) {human_player = b;}
 	int GetScoreA() {return score[0];}
 	int GetScoreB() {return score[1];}
 	int GetScoreLimit() {return score_limit;}
@@ -83,7 +85,6 @@ public:
 	virtual void ContactEnd(Contact contact);
 	
 	Callback1<int> WhenScore, WhenFinish;
-	
 	
 	
 };

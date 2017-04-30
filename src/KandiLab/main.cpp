@@ -11,6 +11,9 @@ GUI_APP_MAIN {
 	if (dlg.action == 1) {
 		Game().Run();
 	}
+	else if (dlg.action == 3) {
+		AIOnlyGame().Run();
+	}
 	else {
 		KandiLab().Run();
 	}

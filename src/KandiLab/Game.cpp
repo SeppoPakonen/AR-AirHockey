@@ -11,8 +11,12 @@ StartupDialog::StartupDialog() {
 	
 	SetRect(0,0, 650, 330);
 	Add(banner.VSizePos(0, 30).HSizePos());
-	Add(play.BottomPos(2, 26).HCenterPos(100, -51));
-	Add(analyse.BottomPos(2, 26).HCenterPos(100, +51));
+	Add(showai.BottomPos(2, 26).HCenterPos(100, -101));
+	Add(play.BottomPos(2, 26).HCenterPos(100, 0));
+	Add(analyse.BottomPos(2, 26).HCenterPos(100, +101));
+	
+	showai.SetLabel("Show AI");
+	showai <<= THISBACK1(SetAction, 3);
 	
 	play.SetLabel("Play");
 	play <<= THISBACK1(SetAction, 1);
@@ -138,6 +142,21 @@ void Game::OpenAirHockey() {
 	}
 	
 	surf.Unlock();
+}
+
+
+
+
+AIOnlyGame::AIOnlyGame() {
+	Title("AI players playing AirHockey");
+	Icon(KandiLabImg::icon32());
+	
+	Add(table.SizePos());
+	
+	table.SetHumanPlayer(false);
+	table.Init();
+	
+	SetRect(0,0, 400, 640);
 }
 
 
